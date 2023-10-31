@@ -10,9 +10,8 @@ const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
-app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
-}); // quedamos acá
+router(app);
+
 app.listen(PORT, () => {
   console.log(`server is running at http://localhost:${PORT}`);
 });
